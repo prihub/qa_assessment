@@ -2,9 +2,12 @@ package com.bootcampexercise.module5.activity2;
 
 public class Circle extends Shape {
 
-    double radius = 5;   // example value
+    private double radius;
 
-    // Implement abstract methods
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
     public double calculateArea() {
         return Math.PI * radius * radius;
     }

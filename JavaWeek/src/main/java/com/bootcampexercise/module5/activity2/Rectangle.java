@@ -2,15 +2,22 @@ package com.bootcampexercise.module5.activity2;
 
 public class Rectangle extends Shape {
 
-    double length = 10;
-    double width = 5;
+    private double length;
+    private double breadth;
 
-    // Implement abstract methods
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setBreadth(double breadth) {
+        this.breadth = breadth;
+    }
+
     public double calculateArea() {
-        return length * width;
+        return length * breadth;
     }
 
     public double calculatePerimeter() {
-        return 2 * (length + width);
+        return 2 * (length + breadth);
     }
 }

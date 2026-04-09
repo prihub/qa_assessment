@@ -6,28 +6,23 @@ public class AbstractActivity {
 
         Rectangle rectangle = new Rectangle();
 
-        // set and print color
-        rectangle.setColor("Blue");
+        rectangle.setColor("Red");
+        rectangle.setLength(5);
+        rectangle.setBreadth(3);
+
         System.out.println("Rectangle color: " + rectangle.getColor());
-
-        // print area
         System.out.println("Rectangle area: " + rectangle.calculateArea());
-
-        // print perimeter
         System.out.println("Rectangle perimeter: " + rectangle.calculatePerimeter());
 
-        System.out.println("-------------------------");
+        System.out.println();
 
         Circle circle = new Circle();
 
-        // set and print color
-        circle.setColor("Red");
+        circle.setColor("Blue");
+        circle.setRadius(4);
+
         System.out.println("Circle color: " + circle.getColor());
-
-        // print area
         System.out.println("Circle area: " + circle.calculateArea());
-
-        // print perimeter
         System.out.println("Circle perimeter: " + circle.calculatePerimeter());
     }
 }

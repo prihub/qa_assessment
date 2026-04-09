@@ -3,12 +3,8 @@ package com.bootcampexercise.module5.activity2;
 // Abstract class
 public abstract class Shape {
 
-    public String color;
+    private String color;
 
-    public Shape() {
-    }
-
-    // Abstract methods
     public abstract double calculateArea();
     public abstract double calculatePerimeter();
 
