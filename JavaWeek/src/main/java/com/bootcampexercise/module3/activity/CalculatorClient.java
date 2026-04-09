@@ -3,34 +3,26 @@ package com.bootcampexercise.module3.activity;
 public class CalculatorClient {
     public static void main(String[] args) {
 
-        int a = 20;
-        int b = 5;
+        Calculator normalCalc = new Calculator(Calculator.CALC_TYPE_BASIC);
 
-        // Calling all methods
-        sum(a, b);
-        subtract(a, b);
-        multiply(a, b);
-        divide(a, b);
-        module(a, b);
-    }
+        System.out.println("** Calculations will be performed using "
+                + normalCalc.getCalculatorType() + " calculator ***");
 
-    public static void sum(int a, int b) {
-        System.out.println("Sum: " + (a + b));
-    }
+        // Add
+        int result = normalCalc.add(4, 5);
+        System.out.println("1) Add result is " + result);
 
-    public static void subtract(int a, int b) {
-        System.out.println("Subtract: " + (a - b));
-    }
+        // Multiply
+        int[] mul = {2, 3, 4};
+        result = normalCalc.multiply(mul);
+        System.out.println("2) Multiplication result is " + result);
 
-    public static void multiply(int a, int b) {
-        System.out.println("Multiply: " + (a * b));
-    }
+        // Divide
+        result = normalCalc.divide(10, 2);
+        System.out.println("3) Divide result is " + result);
 
-    public static void divide(int a, int b) {
-        System.out.println("Divide: " + (a / b));
-    }
-
-    public static void module(int a, int b) {
-        System.out.println("Module (Remainder): " + (a % b));
+        // Subtract
+        result = normalCalc.subtract(10, 2);
+        System.out.println("4) Subtract result is " + result);
     }
 }

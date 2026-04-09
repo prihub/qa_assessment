@@ -1,4 +1,4 @@
-package sef.module4.activity;
+package com.bootcampexercise.module3.activity;
 
 public class CarInstance {
     public static void main(String[] args) {
