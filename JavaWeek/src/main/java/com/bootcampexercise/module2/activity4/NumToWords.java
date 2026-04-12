@@ -1,60 +1,55 @@
-package com.bootcampexercise.module2.activity;
+package com.bootcampexercise.module2.activity4;
 
+/**
+ * Demonstrates converting numbers to words using switch case
+ */
 public class NumToWords {
 
     public static void main(String[] args) {
 
-        // Calling the method with different numbers
-        switchCaseEx(5);   // Activity 4
-        switchCaseEx(100); // Variation for default section execution
+        switchCaseEx(5);
+        switchCaseEx(100); // default case execution
         switchCaseEx(1);
     }
 
-    public static void switchCaseEx(int num) {
+    /**
+     * Prints number in words for values 1–10
+     */
+    public static void switchCaseEx(int number) {
 
-        switch (num) {
+        switch (number) {
             case 1:
                 System.out.println("ONE");
                 break;
-
             case 2:
                 System.out.println("TWO");
                 break;
-
             case 3:
                 System.out.println("THREE");
                 break;
-
             case 4:
                 System.out.println("FOUR");
                 break;
-
             case 5:
                 System.out.println("FIVE");
                 break;
-
             case 6:
                 System.out.println("SIX");
                 break;
-
             case 7:
                 System.out.println("SEVEN");
                 break;
-
             case 8:
                 System.out.println("EIGHT");
                 break;
-
             case 9:
                 System.out.println("NINE");
                 break;
-
             case 10:
                 System.out.println("TEN");
                 break;
-
             default:
-                System.out.println("Given value is not in the range 1-10");
+                System.out.println("Given value is not in the range 1-10"); // Prints when the given number is not between 1-10
         }
     }
 }

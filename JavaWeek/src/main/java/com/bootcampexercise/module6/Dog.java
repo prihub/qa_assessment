@@ -1,14 +1,22 @@
 package com.bootcampexercise.module6;
 
-// Dog class implements Animal
-public class Dog implements AnimalInterface {
+/**
+ * Dog class implements Animal interface.
+ */
+public class Dog implements Animal {
 
-    // Implementation of animalSound()
-    public void animalSound() {
+    /**
+     * Dog sound implementation
+     */
+    @Override
+    public void makeSound() {
         System.out.println("Dog says: 'Woof Woof'!");
     }
 
-    // Implementation of sleep()
+    /**
+     * Dog sleep implementation
+     */
+    @Override
     public void sleep() {
         System.out.println("Dog is sleeping!");
     }

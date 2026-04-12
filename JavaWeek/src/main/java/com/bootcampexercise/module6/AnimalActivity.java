@@ -1,27 +1,46 @@
 package com.bootcampexercise.module6;
 
+/**
+ * AnimalActivity demonstrates interface and polymorphism.
+ */
 public class AnimalActivity {
 
-    public static void main(String arg[]) {
+    public static void main(String[] args) {
 
-        // Use interfaces to declare identifiers
-        AnimalInterface cat = new Cat();
-        AnimalInterface dog = new Dog();
+        // =========================
+        // INTERFACE REFERENCE
+        // =========================
 
-        Mammal mammal = new Mammal("Charlie");
+        // Using interface reference for Dog
+        Animal dog = new Dog();
 
-        // Set animal to cat
-        mammal.setAnimal(cat);
+        dog.makeSound();
+        dog.sleep();
 
-        // Execute methods
-        mammal.animalIsSleeping();
-        mammal.animalIsSpeaking();
+        System.out.println("-----------------------------");
 
-        // Set animal to dog
-        mammal.setAnimal(dog);
+        // =========================
+        // USING MAMMAL WITH CAT
+        // =========================
 
-        // Execute methods
-        mammal.animalIsSleeping();
-        mammal.animalIsSpeaking();
+        Mammal mammal = new Mammal("My Pet");
+
+        // Setting Cat
+        mammal.setPet(new Cat());
+
+        mammal.sleep();
+        mammal.speak();
+
+        System.out.println("-----------------------------");
+
+        // =========================
+        // USING MAMMAL WITH DOG
+        // =========================
+
+        // Changing to Dog
+        mammal.setPet(new Dog());
+
+        mammal.sleep();
+        mammal.speak();
     }
 }

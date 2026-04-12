@@ -1,28 +1,47 @@
 package com.bootcampexercise.module5.activity2;
 
+/**
+ * AbstractActivity demonstrates abstraction where all shape values
+ * are assigned in this class instead of inside shape classes.
+ */
 public class AbstractActivity {
 
-    public static void main(String args[]) {
+    /**
+     * Main method - program execution starts here
+     */
+    public static void main(String[] args) {
 
-        Rectangle rectangle = new Rectangle();
+        // =========================
+        // RECTANGLE OBJECT
+        // =========================
 
-        rectangle.setColor("Red");
-        rectangle.setLength(5);
-        rectangle.setBreadth(3);
+        Rectangle rectangleObject = new Rectangle();
 
-        System.out.println("Rectangle color: " + rectangle.getColor());
-        System.out.println("Rectangle area: " + rectangle.calculateArea());
-        System.out.println("Rectangle perimeter: " + rectangle.calculatePerimeter());
+        // Setting rectangle properties (DONE HERE as requested)
+        rectangleObject.setColor("Blue");
+        rectangleObject.length = 10;
+        rectangleObject.breadth = 5;
 
-        System.out.println();
+        // Output: Rectangle details
+        System.out.println("Rectangle Color: " + rectangleObject.getColor());
+        System.out.println("Rectangle Area: " + rectangleObject.calculateArea());
+        System.out.println("Rectangle Perimeter: " + rectangleObject.calculatePerimeter());
 
-        Circle circle = new Circle();
+        System.out.println("-----------------------------");
 
-        circle.setColor("Blue");
-        circle.setRadius(4);
+        // =========================
+        // CIRCLE OBJECT
+        // =========================
 
-        System.out.println("Circle color: " + circle.getColor());
-        System.out.println("Circle area: " + circle.calculateArea());
-        System.out.println("Circle perimeter: " + circle.calculatePerimeter());
+        Circle circleObject = new Circle();
+
+        // Setting circle properties (DONE HERE as requested)
+        circleObject.setColor("Red");
+        circleObject.radius = 7;
+
+        // Output: Circle details
+        System.out.println("Circle Color: " + circleObject.getColor());
+        System.out.println("Circle Area: " + circleObject.calculateArea());
+        System.out.println("Circle Perimeter: " + circleObject.calculatePerimeter());
     }
 }

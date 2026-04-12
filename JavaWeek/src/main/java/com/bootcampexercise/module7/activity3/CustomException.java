@@ -1,9 +1,13 @@
-package com.bootcampexercise.module7.activity;
+package com.bootcampexercise.module7.activity3;
 
-// 1 - extend this class from Exception
+/**
+ * Custom exception for invalid user.
+ */
 public class CustomException extends Exception {
 
-    // 2 - Override getMessage()
+    /**
+     * Returns custom error message.
+     */
     @Override
     public String getMessage() {
         return "You are not allowed to use this program";
