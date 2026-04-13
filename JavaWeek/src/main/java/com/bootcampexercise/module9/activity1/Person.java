@@ -25,22 +25,21 @@ public class Person {
     }
 
     /**
-     * Calculates BMI and returns category
+     * calculates BMI and returns category
      */
     public String getBodyMassIndex(int weight, float height) {
 
-        // validate input values
+        // validate inputs
         if (weight <= 0 || height <= 0) {
             return "Invalid input";
         }
 
-        if (weight > 500 || height > 3) { // basic max limits
+        if (weight > 500 || height > 3) {
             return "Unrealistic values";
         }
 
         float bmi = weight / (height * height);
 
-        // determine BMI category
         if (bmi < 18.5) {
             return "Underweight";
         } else if (bmi < 25) {

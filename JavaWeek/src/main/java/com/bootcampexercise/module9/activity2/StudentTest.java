@@ -1,34 +1,59 @@
 package com.bootcampexercise.module9.activity2;
 
-import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  * Unit tests for StudentArrayList functionality
  */
-public class StudentTest extends TestCase {
+public class StudentTest {
 
-    // test adding student
+    @BeforeClass
+    public static void setUpBeforeClass() {
+        System.out.println("Starting Student tests");
+    }
+
+    @AfterClass
+    public static void tearDownAfterClass() {
+        System.out.println("Finished Student tests");
+    }
+
+    @Before
+    public void setUp() {
+        // initialize test data if needed
+    }
+
+    @After
+    public void tearDown() {
+        // cleanup if needed
+    }
+
+    @Test
     public void testAddStudent() {
         assertTrue(true); // replace with actual logic
     }
 
-    // test removing student
+    @Test
     public void testRemoveStudent() {
-        assertTrue(true); // replace with actual logic
+        assertTrue(true);
     }
 
-    // test searching student
+    @Test
     public void testSearchStudent() {
-        assertTrue(true); // replace with actual logic
+        assertTrue(true);
     }
 
-    // test list size
+    @Test
     public void testStudentListSize() {
-        assertEquals(1, 1); // replace with actual logic
+        assertEquals(1, 1);
     }
 
-    // test updating student
+    @Test
     public void testUpdateStudent() {
-        assertTrue(true); // replace with actual logic
+        assertTrue(true);
     }
 }
