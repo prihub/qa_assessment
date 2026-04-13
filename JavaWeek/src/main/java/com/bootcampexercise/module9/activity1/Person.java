@@ -1,47 +1,46 @@
 package com.bootcampexercise.module9.activity1;
 
 /**
- * Represents a person with height and weight.
- * Provides functionality to calculate BMI.
+ * Represents a person with weight and height
  */
 public class Person {
 
-    private int weightKg;
-    private float heightMeter;
+    private int weight;
+    private float height;
 
-    public int getWeightKg() {
-        return weightKg;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setWeightKg(int weightKg) {
-        this.weightKg = weightKg;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
-    public float getHeightMeter() {
-        return heightMeter;
+    public float getHeight() {
+        return height;
     }
 
-    public void setHeightMeter(float heightMeter) {
-        this.heightMeter = heightMeter;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
     /**
-     * Calculates BMI and returns category.
-     * Includes validation for invalid or unrealistic values.
+     * Calculates BMI and returns category
      */
-    public String getBodyMassIndex(int weightKg, float heightMeter) {
+    public String getBodyMassIndex(int weight, float height) {
 
-        // Validation checks
-        if (weightKg <= 0 || heightMeter <= 0) {
+        // validate input values
+        if (weight <= 0 || height <= 0) {
             return "Invalid input";
         }
 
-        if (weightKg > 500 || heightMeter > 3) {
+        if (weight > 500 || height > 3) { // basic max limits
             return "Unrealistic values";
         }
 
-        double bmi = weightKg / (heightMeter * heightMeter);
+        float bmi = weight / (height * height);
 
+        // determine BMI category
         if (bmi < 18.5) {
             return "Underweight";
         } else if (bmi < 25) {

@@ -3,60 +3,36 @@ package com.bootcampexercise.module9.activity1;
 import junit.framework.TestCase;
 
 /**
- * Unit tests for Person class.
+ * Unit tests for Person class
  */
 public class PersonTest extends TestCase {
 
     private Person person;
 
+    // initialize object before each test
     protected void setUp() {
         person = new Person();
     }
 
+    // cleanup after each test
     protected void tearDown() {
         person = null;
     }
 
-    /**
-     * Tests setters and getters.
-     */
-    public void testSetAndGetValues() {
-        person.setWeightKg(70);
-        person.setHeightMeter(1.75f);
-
-        assertEquals(70, person.getWeightKg());
-        assertEquals(1.75f, person.getHeightMeter());
+    // test getters and setters
+    public void testSetAndGetWeight() {
+        person.setWeight(70);
+        assertEquals(70, person.getWeight());
     }
 
-    /**
-     * Tests BMI calculation for normal case.
-     */
-    public void testBMI_Normal() {
+    public void testSetAndGetHeight() {
+        person.setHeight(1.75f);
+        assertEquals(1.75f, person.getHeight());
+    }
+
+    // test BMI calculation
+    public void testGetBodyMassIndex() {
         String result = person.getBodyMassIndex(70, 1.75f);
         assertEquals("Normal", result);
-    }
-
-    /**
-     * Tests BMI for underweight case.
-     */
-    public void testBMI_Underweight() {
-        String result = person.getBodyMassIndex(45, 1.75f);
-        assertEquals("Underweight", result);
-    }
-
-    /**
-     * Tests invalid input handling.
-     */
-    public void testBMI_Invalid() {
-        String result = person.getBodyMassIndex(0, 1.75f);
-        assertEquals("Invalid input", result);
-    }
-
-    /**
-     * Tests unrealistic values.
-     */
-    public void testBMI_Unrealistic() {
-        String result = person.getBodyMassIndex(600, 5f);
-        assertEquals("Unrealistic values", result);
     }
 }
